@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import '@contentstack/venus-components/build/main.css'
+import '@contentstack/venus-components/build/variables.css';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
