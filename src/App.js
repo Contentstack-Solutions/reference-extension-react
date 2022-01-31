@@ -1,5 +1,4 @@
 import { Button, TextInput, Select } from "@contentstack/venus-components";
-import Table from "./components/Table";
 import VTable from "./components/vTable";
 import { useState, useEffect } from "react";
 import './App.css'
