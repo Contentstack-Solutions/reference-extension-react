@@ -2,6 +2,7 @@
 
 ## Setup
 
+- Run this app using instructions below
 - Import 'Blog' and 'Test' content type into your Stack (provided by email).
 - Import sample entries for Blog #1-3 and Test Entry (provided by email).
 - Publish all entries to 'dev' environment.
