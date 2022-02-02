@@ -16,7 +16,7 @@ export default function VTable(props) {
   let [viewBy, updateViewBy] = useState("Comfort");
   let [totalCounts, updateTotalCounts] = useState(null);
   let [selectedAssets, updateSelectedAssets] = useState({});
-  // let [resetRowSelection, updateResetRowSelection] = useState(false);
+  let [resetRowSelection, updateResetRowSelection] = useState(false);
 
   const [error, setError] = useState(null);
   const [extension, setExtension] = useState(null);
@@ -253,7 +253,7 @@ export default function VTable(props) {
         console.log(extension.field)
         setCurrentSelection(data.data[0]);
         console.log(currentSelection)
-        // updateResetRowSelection(true);
+        updateResetRowSelection(true);
 
       },
     },
@@ -262,7 +262,7 @@ export default function VTable(props) {
   return (
     <div>
       <Heading tagName="h5" text='Current Selected Entry: ' />
-      <Paragraph tagName='p' className="current-selection" text={`${currentSelection.title + " (" + currentSelection.uid + ")"}`} />
+      <Paragraph tagName='p' className="current-selection" text={`${currentSelection.title + " " + currentSelection.uid}`} />
       {/* <p>{Object.keys(selectedAssets)[0] ?? "test"}</p> */}
       <InfiniteScrollTable
         key={props.filteredData}
@@ -282,7 +282,7 @@ export default function VTable(props) {
         // searchPlaceholder={args.searchPlaceholder}
         canSearch={true}
         canRefresh={true}
-        fullRowSelect={true}
+        fullRowSelect={false}
         initialSelectedRowIds={selectedAssets}
         isRowSelect={true}
         onRowSelectProp={onRowSelectProp}

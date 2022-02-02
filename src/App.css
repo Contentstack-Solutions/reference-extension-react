@@ -4704,15 +4704,16 @@ a:hover {
 }
 
 .vtable {
-  height: 600px;
+  height: 650px;
 }
 
 .container-1 {
-  max-height: 50rem;
+  max-height: 55rem;
+  margin:0.7rem
 }
 
 .cs-table, .Table {
-  max-height: 30rem;
+  max-height: 5rem;
 }
 
 .current-selection {
