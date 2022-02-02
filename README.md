@@ -3,6 +3,8 @@
 ## Setup
 
 - Import 'Blog' and 'Test' content type into your Stack (provided by email).
+- Import sample entries for Blog #1-3 and Test Entry (provided by email).
+- Publish all entries to 'dev' environment.
 - In App.js replace the api_key and access_token with your Stack's tokens.
 
 ## Run
