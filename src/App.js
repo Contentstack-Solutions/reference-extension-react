@@ -1,7 +1,9 @@
 import { Button, TextInput, Select } from "@contentstack/venus-components";
 import VTable from "./components/vTable";
 import { useState, useEffect } from "react";
-import './App.css'
+import "./App.css";
+import React from "react";
+import "reactjs-popup/dist/index.css";
 
 export default function App() {
   const [query, setQuery] = useState("");
@@ -89,7 +91,6 @@ export default function App() {
       finalize();
     }
   };
-
   return (
     <div className="container-1">
       <div className="row">
@@ -161,3 +162,75 @@ export default function App() {
     </div>
   );
 }
+
+//   return (
+//     <div className="container-1">
+//       <div className="row">
+//         <form>
+//           <TextInput
+//             type="text"
+//             value={query}
+//             placeholder="Query..."
+//             onChange={(e) => {
+//               setQuery(e.target.value);
+//             }}
+//           />
+//         </form>
+
+//         <Select
+//           hideSelectedOptions
+//           maxMenuHeight={200}
+//           isClearable={true}
+//           noOptionsMessage={function noRefCheck() {}}
+//           onChange={handleValueUpdate}
+//           options={[
+//             {
+//               id: 0,
+//               label: "Title",
+//               value: "title",
+//             },
+//             {
+//               id: 1,
+//               label: "Author",
+//               value: "author",
+//             },
+//             {
+//               id: 2,
+//               label: "Biography",
+//               value: "biography",
+//             },
+//             {
+//               id: 3,
+//               label: "Occupation",
+//               value: "occupation",
+//             },
+//             {
+//               id: 4,
+//               label: "UID",
+//               value: "uid",
+//             },
+//             {
+//               id: 5,
+//               label: "Tags",
+//               value: "tags",
+//             },
+//           ]}
+//           placeholder="All"
+//           // selectLabel="Select"
+//           value={vvalue}
+//           width="200px"
+//         />
+//         <Button onClick={finalize}>Search</Button>
+//         <Button buttonType={"secondary"} onClick={clear}>
+//           Clear
+//         </Button>
+//       </div>
+
+//       {/* <Table filteredData={filteredData}></Table> */}
+
+//       <div className="vtable">
+//         <VTable filteredData={filteredData} />
+//       </div>
+//     </div>
+//   );
+// }
